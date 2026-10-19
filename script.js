@@ -40,7 +40,7 @@ document.querySelector("#stop").addEventListener("click", () => {
 });
 
 function getSpeechRate() {
-  console.log(rateInput.value);
+  // console.log(rateInput.value);
   return Number(rateInput.value);
 }
 
