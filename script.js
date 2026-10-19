@@ -1,4 +1,3 @@
-// Your script here.
 let rateInput = document.querySelector("#rateInput");
 let pitchInput = document.querySelector("#pitchInput");
 let voiceSelect = document.querySelector("#voices");
@@ -41,10 +40,18 @@ document.querySelector("#stop").addEventListener("click", () => {
 });
 
 function getSpeechRate() {
-  // console.log(rateInput.value);
+  console.log(rateInput.value);
   return Number(rateInput.value);
 }
 
 function getSpeechPitch() {
   return Number(pitchInput.value);
 }
+
+//display rate and pitch value
+document.querySelector("#rateInput").addEventListener("input",()=>{
+  document.querySelector("#rateDisplay").textContent = rateInput.value;
+});
+document.querySelector("#pitchInput").addEventListener("input",()=>{
+  document.querySelector("#pitchDisplay").textContent = pitchInput.value;
+});
